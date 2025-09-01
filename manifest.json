@@ -1,0 +1,40 @@
+{
+  "name": "Stroll.Theta.Sixty",
+  "description": "1-minute OHLCV bars for options backtesting",
+  "version": "1.0.0",
+  "created": "2025-09-01",
+  "symbols": ["SPX", "XSP", "VIX", "QQQ", "GLD", "USO"],
+  "resolution": "1-minute",
+  "timezone": "US/Eastern",
+  "market_hours": {
+    "start": "09:30",
+    "end": "16:00"
+  },
+  "date_range": {
+    "start": "2018-01-01",
+    "end": "2025-08-29"
+  },
+  "file_format": {
+    "type": "parquet",
+    "compression": "snappy",
+    "pattern": "bars/YYYY/MM/DD/{SYMBOL}_{HH}.parquet"
+  },
+  "schema": {
+    "ts_utc": "timestamp[ns]",
+    "ts_et": "timestamp[ns]", 
+    "symbol": "string",
+    "open": "decimal(10,2)",
+    "high": "decimal(10,2)",
+    "low": "decimal(10,2)",
+    "close": "decimal(10,2)",
+    "volume": "int64",
+    "vwap": "decimal(10,4)"
+  },
+  "stats": {
+    "total_files": 0,
+    "total_days": 0,
+    "total_bars": 0,
+    "size_mb": 0,
+    "last_updated": "2025-09-01T21:05:00Z"
+  }
+}
